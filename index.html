@@ -11,10 +11,36 @@
         h1{
             font-size: large;
         }
+        p{
+            font-size: x-large;
+            color: rgb(242, 235, 235);
+        }
+     button{
+        padding: 10px;
+        font-size: 16px;    
+        background-color: antiquewhite;
+        border: none;
+        cursor: pointer;
+
+    } 
 
     </style>
 </head>
 <body>
     <h1>Sushant thapa chhetri</h1>
+    <p>About myself</p>
+    <p></p>
+    <button id="toggleBtn">click here for magic</button>
+    <script>
+        const button = document.getElementById('toggleBtn');
+        let isDark = false;
+
+        button.addEventListener('click', function () {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#333' : '#fff';
+            document.body.style.color = isDark ? '#fff' : '#000';
+        });
+    </script>
+
 </body>
 </html>
